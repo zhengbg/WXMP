@@ -1,0 +1,18 @@
+profiles: dev
+logging:
+  config: classpath:log4j2.xml
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    username: root
+    password: x5
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/wxmp?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+server:
+  port: 8080
