@@ -38,9 +38,6 @@ public class InitConfig
 	//实体类路径
 	private static final String ENTITY_PACKAGE_PATH = "com.wx.jzh.entity";
 
-	//mybatis配置文件路径
-	private static final String MYBATIS_PATH = "classpath:/mybatis-config.xml";
-
 	//mybatis映射文件路径
 	private static final String MAPPER_PATH = "classpath:/mapper/*.xml";
 
@@ -59,8 +56,6 @@ public class InitConfig
 
 		try
 		{
-			//加载mybatis配置文件
-			sqlSessionFactoryBean.setConfigLocation (resolver.getResource (MYBATIS_PATH));
 			sqlSessionFactoryBean.setMapperLocations (resolver.getResources (MAPPER_PATH));
 			return sqlSessionFactoryBean.getObject ();
 		}
